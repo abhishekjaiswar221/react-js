@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+#root{
+    width: 100%;
+}
+#container{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#container > table{
+    width: 100%;
+}
+table,tr,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding:10px 20px;
+}
+button{
+    border: none;
+    border-radius: 5px;
+    
+}
+.edit{
+    padding: 10px 20px;
+    background: rgb(227, 81, 227);
+}
+.delete{
+    padding: 10px 20px;
+    background: rgb(232, 37, 37);
+}
+.read{
+    padding: 10px 20px;
+    background: rgb(75, 238, 75);
+}
+.add_users{
+    display: flex;
+    justify-content: flex-end;
+}
+.add_users > button{
+    height: 50px;
+    width: 200px;
+    background: #111;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+.add_users > button > a{
+    display: inline-block;
+    height: inherit;
+    width: inherit;
+    border-radius: 5px;
+    color: #fff;
+    padding-top: 17px;
+    text-decoration: none;
+    font-size: 1rem;
+}

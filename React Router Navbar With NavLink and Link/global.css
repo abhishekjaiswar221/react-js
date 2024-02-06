@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#container {
+  height: 100px;
+  width: 100%;
+  background-color: #8b8b8b;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.active {
+  text-decoration: none;
+  font-weight: bolder;
+  color: greenyellow;
+}
