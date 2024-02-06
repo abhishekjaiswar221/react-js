@@ -1,0 +1,162 @@
+WHY REACT IS NAMED REACT ?
+React is aptly named because: It "reacts" quickly to changes without reloading the whole page. It uses the virtual DOM to efficiently update parts of a webpage. It's built around components that "react" and update.
+
+---------------------------------------------------------------------------------------
+Date:-12-10-2023:
+
+Node.js: It's just a development environment which helps javascript to run on the server side.
+Virtual DOM:
+The virtual DOM (V-DOM) is a programming concept where an ideal, or “virtual”,
+representation of a UI is kept in memory and synced with the “real” DOM by a library
+such as ReactDOM. This process is called reconciliation.
+
+Reconciliation:
+Reconciliation is the process through which React updates the DOM. When a app's
+state changes, React has to calculate if it is necessary to update the DOM. It does this
+by creating a virtual DOM and comparing it with the current DOM.It follows diffing algorithm.
+
+Diffing Algorithm:
+The diffing algorithm in React allows for the efficient updates and rendering of these
+DOM elements. As changes occur within the application's state or properties, React uses
+its diff algorithm to compare the new Virtual DOM with the old one.
+
+Difference between npm and npx:
+NPM is a package management that is used to install, uninstall, and update Javascript
+packages on your workstation, whereas NPX is a package executer that is used to directly
+execute Javascript packages without installing them.
+
+
+Commands:
+npm install package-name -g-->"-g" refers to global.
+Eg: npm install cowsay -g
+Eg: npm uninstall cowsay
+node -v
+npm -v
+npm list
+npx -v
+npm update
+npm start
+npm run build
+npm init-->For locally installing the package.
+
+
+
+NPM installs global packages in the following directory:
+File Location:- C:\Users\abhis\AppData\Roaming\npm
+NPM installs local packages in the folder from where you run the command.
+
+NPX installs the packages temporarily in the following directory as a cache file:
+File Location:- C:\Users\{YourUserName}\AppData\Local\npm-cache\_npx
+File Location:-On My System:C:\Users\abhis\AppData\Local\npm-cache\_npx
+
+
+Create React App Package:
+"create-react-app" is a package.
+
+We cannot create react app with uppercase letters.It will give the warning:
+C:\Users\abhis>npx create-react-app My-App
+Cannot create a project named "My-App" because of npm naming restrictions:
+
+  * name can no longer contain capital letters
+
+Please choose a different project name.
+
+
+How To Create React App:
+npm init-->To install create-react-app package locally
+npm install -g create-react-app--"-g" used to install the package globally use init to install locally.
+npx create-react-app <app-name> Eg:npx create-react-app my-app     
+cd my-app      
+npm start
+
+---------------------------------------------------------------------------------------
+Date:-13-10-2023:
+
+React DOM:
+The react-dom package provides DOM-specific methods that can be used at the top level of your app
+and as an escape hatch to get outside the React model if you need to.
+
+The react-dom package also provides module specific to client and server apps:
+->react-dom/client
+->react-dom/server
+
+1.createElement() Method:
+createElement() lets you create a React element.It serves as an alternative to writing JSX.
+Eg: const element = createElement(type,props,...children)
+Usage:
+Creating an element without using JSX.
+
+
+2.createRoot() Method:
+createRoot(rootElement) is a React utility function used to create a React root element,
+which is a DOM element in which UI components render themselves. It takes as a parameter the
+root element that should be created.
+
+
+JSX(Javascript XML):
+
+JSX allows us to write HTML elements in JavaScript and place them in the DOM without any
+createElement() and/or appendChild() methods.
+You are not required to use JSX, but JSX makes it easier to write React application.
+
+JSX Rules:
+1.Multiple React Elements:-It must be enclosed within parenthesis ().
+2.Adjacent Level Elements:-Elements must be wrapped inside one parent container.
+3.All the React elements must be closed.
+
+Date:-16-10-2023:
+React Fragment:(<></>)
+<>Write the React JSX Code</>
+Alternatively, you can use a "fragment" to wrap multiple lines.This prevents unnecessarily adding
+extra nodes to the DOM.
+A fragment looks like an empty React JSX tag:<></>
+
+Expression in JSX:
+With JSX you can write expressions inside curly braces { }.
+The expression can be a React variable, or property, or any other valid JavaScript expression.
+
+---------------------------------------------------------------------------------------
+Date:-24-10-2023:
+
+In ReactJS, the props are a type of object where the value of the attributes of a tag is stored.
+The word "props" implies "properties", and its working functionality is similar to HTML attributes.
+Basically these props components are read only components.
+
+
+---------------------------------------------------------------------------------------
+Date:-26-10-2023:
+
+PropTypes:
+PropTypes exports a range of validators that can be used to make sure the data you receive is valid. In this example, we’re using PropTypes.string. When an invalid value is provided for a prop, a warning will be shown in the JavaScript console. For performance reasons, propTypes is only checked in development mode.
+
+Prop Drilling:
+Prop drilling is a technique in React for passing data from a parent component to a child component, and then that child component passes the same data down to its own children, and so on
+
+
+---------------------------------------------------------------------------------------
+Date:-30-10-2023:
+
+Refs are a function provided by React to access the DOM element and the React element that you might have created on your own.
+
+
+---------------------------------------------------------------------------------------
+Date:-17-11-2023:
+
+The React useMemo Hook returns a memoized value.
+Think of memoization as caching a value so that it does not need to be recalculated.
+The useMemo Hook only runs when one of its dependencies update.
+This can improve performance.
+The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useCallback in the useCallback chapter.
+
+
+Performance:
+The useMemo Hook can be used to keep expensive, resource intensive functions from needlessly running.
+
+In this example, we have an expensive function that runs on every render.
+
+When changing the count or adding a todo, you will notice a delay in execution.
+
+---------------------------------------------------------------------------------------
+Date:-20-11-2023:
+
+Higher-order components (HOCs) are a powerful feature of the React library. They allow you to reuse component logic across multiple components. In React, a higher-order component is a function that takes a component as an argument and returns a new component that wraps the original component
